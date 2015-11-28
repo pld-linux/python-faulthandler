@@ -3,7 +3,7 @@
 Summary:	Display the Python traceback on a crash
 Name:		python-faulthandler
 Version:	2.3
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	http://pypi.python.org/packages/source/f/faulthandler/faulthandler-%{version}.tar.gz
