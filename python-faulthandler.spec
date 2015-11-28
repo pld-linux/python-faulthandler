@@ -25,12 +25,12 @@ able to allocate memory on the stack, even on stack overflow.
 %setup  -q -n %{module}-%{version}
 
 %build
-%{__python} ./setup.py build --build-base py2
+%py_build --build-base py2
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__python} ./setup.py build \
+%py_build \
 	--build-base py2 \
 	install \
 	--optimize 2 \
