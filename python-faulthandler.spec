@@ -9,6 +9,7 @@ Group:		Development/Languages/Python
 Source0:	http://pypi.python.org/packages/source/f/faulthandler/faulthandler-%{version}.tar.gz
 # Source0-md5:	76d1344adc2302cf5c59a5f8a4f4f4ae
 URL:		https://github.com/haypo/faulthandler/wiki
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python-devel
 BuildRequires:	python-modules
 BuildRequires:	rpm-pythonprov
