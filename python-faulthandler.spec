@@ -1,9 +1,8 @@
 %define	module	faulthandler
-#
 Summary:	Display the Python traceback on a crash
 Name:		python-faulthandler
 Version:	2.3
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	http://pypi.python.org/packages/source/f/faulthandler/faulthandler-%{version}.tar.gz
@@ -23,19 +22,15 @@ alternate stack for this handler, if sigaltstack() is available, to be
 able to allocate memory on the stack, even on stack overflow.
 
 %prep
-%setup  -q -n %{module}-%{version}
+%setup -q -n %{module}-%{version}
 
 %build
-%py_build --build-base py2
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%py_build \
-	--build-base py2 \
-	install \
-	--optimize 2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
